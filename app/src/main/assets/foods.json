@@ -1,0 +1,1611 @@
+{
+  "source": {
+    "provider": "식품의약품안전처",
+    "dataset": "전국통합식품영양성분정보(음식)표준데이터",
+    "url": "https://www.data.go.kr/data/15100070/standard.do",
+    "referenceDate": "2026-09-29",
+    "note": "영양성분은 100g(음료는 100ml) 기준. 급식 산출값의 100ml 표기는 100g 으로 간주하고, 음료는 1ml ≈ 1g 으로 환산한다. servingSize 는 산업체급식 1인분 중량(참고값)."
+  },
+  "foods": [
+    {
+      "id": 1,
+      "code": "D301-022000000-0001",
+      "name": "쌀밥",
+      "sourceName": "쌀밥",
+      "category": "밥",
+      "unit": "g",
+      "per100": {
+        "kcal": 166.0,
+        "carbs": 37.33,
+        "protein": 3.36,
+        "fat": 0.32
+      },
+      "servingSize": null,
+      "origin": "외식(분석함량)"
+    },
+    {
+      "id": 2,
+      "code": "D101-032000000-0001",
+      "name": "잡곡밥",
+      "sourceName": "잡곡밥",
+      "category": "밥",
+      "unit": "g",
+      "per100": {
+        "kcal": 146.0,
+        "carbs": 29.33,
+        "protein": 5.3,
+        "fat": 0.87
+      },
+      "servingSize": 450.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 3,
+      "code": "D101-050000000-0001",
+      "name": "현미밥",
+      "sourceName": "현미밥",
+      "category": "밥",
+      "unit": "g",
+      "per100": {
+        "kcal": 172.0,
+        "carbs": 38.9,
+        "protein": 3.1,
+        "fat": 0.47
+      },
+      "servingSize": 370.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 4,
+      "code": "D101-017070000-0001",
+      "name": "김치볶음밥",
+      "sourceName": "볶음밥_김치",
+      "category": "밥",
+      "unit": "g",
+      "per100": {
+        "kcal": 167.0,
+        "carbs": 15.74,
+        "protein": 5.32,
+        "fat": 9.18
+      },
+      "servingSize": 330.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 5,
+      "code": "D101-018000000-0001",
+      "name": "비빔밥",
+      "sourceName": "비빔밥",
+      "category": "밥",
+      "unit": "g",
+      "per100": {
+        "kcal": 142.0,
+        "carbs": 18.84,
+        "protein": 6.86,
+        "fat": 4.32
+      },
+      "servingSize": 545.2,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 6,
+      "code": "D101-044000000-0001",
+      "name": "카레라이스",
+      "sourceName": "카레라이스",
+      "category": "밥",
+      "unit": "g",
+      "per100": {
+        "kcal": 108.0,
+        "carbs": 20.74,
+        "protein": 3.11,
+        "fat": 1.4
+      },
+      "servingSize": 480.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 7,
+      "code": "D101-028000000-0001",
+      "name": "오므라이스",
+      "sourceName": "오므라이스",
+      "category": "밥",
+      "unit": "g",
+      "per100": {
+        "kcal": 173.0,
+        "carbs": 20.54,
+        "protein": 6.5,
+        "fat": 7.23
+      },
+      "servingSize": 531.4,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 8,
+      "code": "D701-036000000-0001",
+      "name": "짜장밥",
+      "sourceName": "짜장밥",
+      "category": "밥",
+      "unit": "g",
+      "per100": {
+        "kcal": 139.0,
+        "carbs": 26.19,
+        "protein": 3.74,
+        "fat": 1.81
+      },
+      "servingSize": 450.0,
+      "origin": "산업체급식(재료량 기반 산출 함량)"
+    },
+    {
+      "id": 9,
+      "code": "D101-010150000-0001",
+      "name": "제육덮밥",
+      "sourceName": "덮밥_돼지고기(제육)",
+      "category": "밥",
+      "unit": "g",
+      "per100": {
+        "kcal": 202.0,
+        "carbs": 16.86,
+        "protein": 9.43,
+        "fat": 10.77
+      },
+      "servingSize": 470.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 10,
+      "code": "D101-010240000-0001",
+      "name": "불고기덮밥",
+      "sourceName": "덮밥_불고기",
+      "category": "밥",
+      "unit": "g",
+      "per100": {
+        "kcal": 182.0,
+        "carbs": 26.96,
+        "protein": 6.6,
+        "fat": 5.31
+      },
+      "servingSize": 400.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 11,
+      "code": "D101-007000000-0001",
+      "name": "김밥",
+      "sourceName": "김밥",
+      "category": "밥",
+      "unit": "g",
+      "per100": {
+        "kcal": 140.0,
+        "carbs": 19.98,
+        "protein": 4.84,
+        "fat": 4.55
+      },
+      "servingSize": 330.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 12,
+      "code": "D101-004310000-0001",
+      "name": "순대국밥",
+      "sourceName": "국밥_순대국밥",
+      "category": "밥",
+      "unit": "g",
+      "per100": {
+        "kcal": 75.0,
+        "carbs": 10.38,
+        "protein": 3.17,
+        "fat": 2.28
+      },
+      "servingSize": 900.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 13,
+      "code": "D103-142410000-0001",
+      "name": "잔치국수",
+      "sourceName": "국수_잔치국수",
+      "category": "면·만두",
+      "unit": "g",
+      "per100": {
+        "kcal": 44.0,
+        "carbs": 8.05,
+        "protein": 1.93,
+        "fat": 0.49
+      },
+      "servingSize": 700.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 14,
+      "code": "D303-157000000-0001",
+      "name": "비빔국수",
+      "sourceName": "비빔국수",
+      "category": "면·만두",
+      "unit": "g",
+      "per100": {
+        "kcal": 113.0,
+        "carbs": 20.0,
+        "protein": 3.4,
+        "fat": 2.1
+      },
+      "servingSize": null,
+      "origin": "외식(분석함량)"
+    },
+    {
+      "id": 15,
+      "code": "D703-187000000-0001",
+      "name": "물냉면",
+      "sourceName": "물냉면",
+      "category": "면·만두",
+      "unit": "g",
+      "per100": {
+        "kcal": 78.0,
+        "carbs": 13.24,
+        "protein": 4.0,
+        "fat": 0.85
+      },
+      "servingSize": 747.8,
+      "origin": "산업체급식(재료량 기반 산출 함량)"
+    },
+    {
+      "id": 16,
+      "code": "D703-192000000-0001",
+      "name": "비빔냉면",
+      "sourceName": "비빔냉면",
+      "category": "면·만두",
+      "unit": "g",
+      "per100": {
+        "kcal": 96.0,
+        "carbs": 16.81,
+        "protein": 4.2,
+        "fat": 1.22
+      },
+      "servingSize": 573.1,
+      "origin": "산업체급식(재료량 기반 산출 함량)"
+    },
+    {
+      "id": 17,
+      "code": "D103-148000000-0001",
+      "name": "라면",
+      "sourceName": "라면",
+      "category": "면·만두",
+      "unit": "g",
+      "per100": {
+        "kcal": 82.0,
+        "carbs": 13.65,
+        "protein": 1.72,
+        "fat": 2.28
+      },
+      "servingSize": 590.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 18,
+      "code": "D703-197000000-0001",
+      "name": "짜장면",
+      "sourceName": "짜장면",
+      "category": "면·만두",
+      "unit": "g",
+      "per100": {
+        "kcal": 117.0,
+        "carbs": 22.06,
+        "protein": 4.0,
+        "fat": 2.06
+      },
+      "servingSize": 550.0,
+      "origin": "산업체급식(재료량 기반 산출 함량)"
+    },
+    {
+      "id": 19,
+      "code": "D103-172000000-0001",
+      "name": "짬뽕",
+      "sourceName": "짬뽕",
+      "category": "면·만두",
+      "unit": "g",
+      "per100": {
+        "kcal": 58.0,
+        "carbs": 8.26,
+        "protein": 2.79,
+        "fat": 1.54
+      },
+      "servingSize": 810.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 20,
+      "code": "D703-164000000-0001",
+      "name": "우동",
+      "sourceName": "우동",
+      "category": "면·만두",
+      "unit": "g",
+      "per100": {
+        "kcal": 61.0,
+        "carbs": 11.22,
+        "protein": 1.86,
+        "fat": 0.72
+      },
+      "servingSize": 630.0,
+      "origin": "산업체급식(재료량 기반 산출 함량)"
+    },
+    {
+      "id": 21,
+      "code": "D103-145000000-0001",
+      "name": "떡국",
+      "sourceName": "떡국",
+      "category": "면·만두",
+      "unit": "g",
+      "per100": {
+        "kcal": 84.0,
+        "carbs": 16.37,
+        "protein": 3.43,
+        "fat": 0.53
+      },
+      "servingSize": 700.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 22,
+      "code": "D103-150030000-0001",
+      "name": "군만두",
+      "sourceName": "만두_군만두",
+      "category": "면·만두",
+      "unit": "g",
+      "per100": {
+        "kcal": 234.0,
+        "carbs": 25.57,
+        "protein": 7.03,
+        "fat": 11.5
+      },
+      "servingSize": 220.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 23,
+      "code": "D105-223000000-0001",
+      "name": "미역국",
+      "sourceName": "미역국",
+      "category": "국·탕",
+      "unit": "g",
+      "per100": {
+        "kcal": 12.0,
+        "carbs": 0.87,
+        "protein": 0.65,
+        "fat": 0.61
+      },
+      "servingSize": 200.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 24,
+      "code": "D105-253000000-0001",
+      "name": "콩나물국",
+      "sourceName": "콩나물국",
+      "category": "국·탕",
+      "unit": "g",
+      "per100": {
+        "kcal": 6.0,
+        "carbs": 0.61,
+        "protein": 0.74,
+        "fat": 0.09
+      },
+      "servingSize": 400.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 25,
+      "code": "D105-219240000-0001",
+      "name": "소고기무국",
+      "sourceName": "무국_소고기",
+      "category": "국·탕",
+      "unit": "g",
+      "per100": {
+        "kcal": 15.0,
+        "carbs": 1.1,
+        "protein": 1.33,
+        "fat": 0.64
+      },
+      "servingSize": 270.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 26,
+      "code": "D105-226000000-0001",
+      "name": "북어국",
+      "sourceName": "북어국",
+      "category": "국·탕",
+      "unit": "g",
+      "per100": {
+        "kcal": 28.0,
+        "carbs": 0.84,
+        "protein": 3.89,
+        "fat": 0.98
+      },
+      "servingSize": 400.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 27,
+      "code": "D705-279000000-0001",
+      "name": "두부된장국",
+      "sourceName": "두부 된장국",
+      "category": "국·탕",
+      "unit": "g",
+      "per100": {
+        "kcal": 26.0,
+        "carbs": 2.12,
+        "protein": 2.3,
+        "fat": 0.99
+      },
+      "servingSize": 260.0,
+      "origin": "산업체급식(재료량 기반 산출 함량)"
+    },
+    {
+      "id": 28,
+      "code": "D105-210000000-0001",
+      "name": "달걀국",
+      "sourceName": "달걀국",
+      "category": "국·탕",
+      "unit": "g",
+      "per100": {
+        "kcal": 13.0,
+        "carbs": 0.69,
+        "protein": 0.93,
+        "fat": 0.74
+      },
+      "servingSize": 260.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 29,
+      "code": "D105-245000000-0001",
+      "name": "육개장",
+      "sourceName": "육개장",
+      "category": "국·탕",
+      "unit": "g",
+      "per100": {
+        "kcal": 30.0,
+        "carbs": 1.49,
+        "protein": 3.68,
+        "fat": 0.99
+      },
+      "servingSize": 440.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 30,
+      "code": "D105-199000000-0001",
+      "name": "갈비탕",
+      "sourceName": "갈비탕",
+      "category": "국·탕",
+      "unit": "g",
+      "per100": {
+        "kcal": 54.0,
+        "carbs": 0.4,
+        "protein": 8.51,
+        "fat": 2.06
+      },
+      "servingSize": 270.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 31,
+      "code": "D105-205000000-0001",
+      "name": "김칫국",
+      "sourceName": "김치국",
+      "category": "국·탕",
+      "unit": "g",
+      "per100": {
+        "kcal": 23.0,
+        "carbs": 2.63,
+        "protein": 1.34,
+        "fat": 0.76
+      },
+      "servingSize": 270.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 32,
+      "code": "D705-310000000-0001",
+      "name": "어묵국",
+      "sourceName": "어묵국",
+      "category": "국·탕",
+      "unit": "g",
+      "per100": {
+        "kcal": 50.0,
+        "carbs": 6.34,
+        "protein": 3.9,
+        "fat": 1.19
+      },
+      "servingSize": 210.0,
+      "origin": "산업체급식(재료량 기반 산출 함량)"
+    },
+    {
+      "id": 33,
+      "code": "D306-266000000-0001",
+      "name": "김치찌개",
+      "sourceName": "김치찌개",
+      "category": "찌개",
+      "unit": "g",
+      "per100": {
+        "kcal": 61.0,
+        "carbs": 2.98,
+        "protein": 3.77,
+        "fat": 3.75
+      },
+      "servingSize": 200.0,
+      "origin": "외식(분석함량)"
+    },
+    {
+      "id": 34,
+      "code": "D106-275000000-0001",
+      "name": "된장찌개",
+      "sourceName": "된장찌개",
+      "category": "찌개",
+      "unit": "g",
+      "per100": {
+        "kcal": 46.0,
+        "carbs": 4.44,
+        "protein": 3.38,
+        "fat": 1.63
+      },
+      "servingSize": 200.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 35,
+      "code": "D506-291320000-0001",
+      "name": "순두부찌개",
+      "sourceName": "순두부찌개_모듬",
+      "category": "찌개",
+      "unit": "g",
+      "per100": {
+        "kcal": 25.0,
+        "carbs": 1.36,
+        "protein": 3.0,
+        "fat": 0.84
+      },
+      "servingSize": 150.0,
+      "origin": "초등학교급식(재료량 기반 산출 함량)"
+    },
+    {
+      "id": 36,
+      "code": "D106-284000000-0001",
+      "name": "부대찌개",
+      "sourceName": "부대찌개",
+      "category": "찌개",
+      "unit": "g",
+      "per100": {
+        "kcal": 123.0,
+        "carbs": 10.27,
+        "protein": 5.86,
+        "fat": 6.49
+      },
+      "servingSize": 270.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 37,
+      "code": "D106-297000000-0001",
+      "name": "청국장찌개",
+      "sourceName": "청국장찌개",
+      "category": "찌개",
+      "unit": "g",
+      "per100": {
+        "kcal": 47.0,
+        "carbs": 1.92,
+        "protein": 5.03,
+        "fat": 2.11
+      },
+      "servingSize": 200.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 38,
+      "code": "D106-273000000-0001",
+      "name": "동태찌개",
+      "sourceName": "동태찌개",
+      "category": "찌개",
+      "unit": "g",
+      "per100": {
+        "kcal": 44.0,
+        "carbs": 1.72,
+        "protein": 6.11,
+        "fat": 1.37
+      },
+      "servingSize": 327.8,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 39,
+      "code": "D710-529000000-0001",
+      "name": "제육볶음",
+      "sourceName": "제육볶음",
+      "category": "고기반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 148.0,
+        "carbs": 13.71,
+        "protein": 15.4,
+        "fat": 3.7
+      },
+      "servingSize": 136.4,
+      "origin": "산업체급식(재료량 기반 산출 함량)"
+    },
+    {
+      "id": 40,
+      "code": "D108-386000000-0001",
+      "name": "소불고기",
+      "sourceName": "소불고기",
+      "category": "고기반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 170.0,
+        "carbs": 4.26,
+        "protein": 16.41,
+        "fat": 9.66
+      },
+      "servingSize": 100.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 41,
+      "code": "D110-462000000-0001",
+      "name": "닭갈비",
+      "sourceName": "닭볶음(닭갈비)",
+      "category": "고기반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 186.0,
+        "carbs": 7.93,
+        "protein": 13.98,
+        "fat": 10.96
+      },
+      "servingSize": 210.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 42,
+      "code": "D312-550000000-0002",
+      "name": "돈가스",
+      "sourceName": "돈가스",
+      "category": "고기반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 280.0,
+        "carbs": 15.89,
+        "protein": 13.85,
+        "fat": 17.94
+      },
+      "servingSize": 100.0,
+      "origin": "외식(분석함량)"
+    },
+    {
+      "id": 43,
+      "code": "D312-549000000-0001",
+      "name": "닭튀김",
+      "sourceName": "닭튀김",
+      "category": "고기반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 301.0,
+        "carbs": 16.27,
+        "protein": 21.73,
+        "fat": 16.57
+      },
+      "servingSize": 172.6,
+      "origin": "외식(분석함량)"
+    },
+    {
+      "id": 44,
+      "code": "D712-587000000-0001",
+      "name": "닭강정",
+      "sourceName": "닭강정",
+      "category": "고기반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 219.0,
+        "carbs": 21.41,
+        "protein": 17.9,
+        "fat": 6.21
+      },
+      "servingSize": 183.9,
+      "origin": "산업체급식(재료량 기반 산출 함량)"
+    },
+    {
+      "id": 45,
+      "code": "D712-566000000-0001",
+      "name": "탕수육",
+      "sourceName": "탕수육",
+      "category": "고기반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 225.0,
+        "carbs": 21.14,
+        "protein": 13.1,
+        "fat": 9.15
+      },
+      "servingSize": 155.2,
+      "origin": "산업체급식(재료량 기반 산출 함량)"
+    },
+    {
+      "id": 46,
+      "code": "D111-532080000-0001",
+      "name": "소고기장조림",
+      "sourceName": "장조림_소고기",
+      "category": "고기반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 69.0,
+        "carbs": 4.84,
+        "protein": 10.41,
+        "fat": 0.86
+      },
+      "servingSize": null,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 47,
+      "code": "D108-376000000-0001",
+      "name": "떡갈비",
+      "sourceName": "떡갈비",
+      "category": "고기반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 202.0,
+        "carbs": 2.46,
+        "protein": 21.38,
+        "fat": 11.82
+      },
+      "servingSize": 200.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 48,
+      "code": "D307-318140000-0001",
+      "name": "찜닭",
+      "sourceName": "닭찜_안동찜닭",
+      "category": "고기반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 91.0,
+        "carbs": 9.3,
+        "protein": 7.61,
+        "fat": 2.59
+      },
+      "servingSize": 1500.0,
+      "origin": "외식(분석함량)"
+    },
+    {
+      "id": 49,
+      "code": "D107-324000000-0001",
+      "name": "돼지갈비찜",
+      "sourceName": "돼지갈비찜",
+      "category": "고기반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 194.0,
+        "carbs": 7.44,
+        "protein": 13.29,
+        "fat": 12.32
+      },
+      "servingSize": 340.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 50,
+      "code": "D708-357000000-0001",
+      "name": "고등어구이",
+      "sourceName": "고등어구이",
+      "category": "생선·해물반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 179.0,
+        "carbs": 3.6,
+        "protein": 12.71,
+        "fat": 12.18
+      },
+      "servingSize": 130.0,
+      "origin": "산업체급식(재료량 기반 산출 함량)"
+    },
+    {
+      "id": 51,
+      "code": "D108-383000000-0001",
+      "name": "삼치구이",
+      "sourceName": "삼치구이",
+      "category": "생선·해물반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 178.0,
+        "carbs": 1.45,
+        "protein": 21.42,
+        "fat": 9.57
+      },
+      "servingSize": 210.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 52,
+      "code": "D111-509000000-0001",
+      "name": "고등어조림",
+      "sourceName": "고등어조림",
+      "category": "생선·해물반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 141.0,
+        "carbs": 4.1,
+        "protein": 11.25,
+        "fat": 8.84
+      },
+      "servingSize": null,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 53,
+      "code": "D110-488000000-0001",
+      "name": "오징어볶음",
+      "sourceName": "오징어볶음",
+      "category": "생선·해물반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 128.0,
+        "carbs": 7.43,
+        "protein": 9.85,
+        "fat": 6.52
+      },
+      "servingSize": 270.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 54,
+      "code": "D309-430040000-0001",
+      "name": "동태전",
+      "sourceName": "생선전_동태",
+      "category": "생선·해물반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 179.0,
+        "carbs": 7.02,
+        "protein": 15.09,
+        "fat": 10.03
+      },
+      "servingSize": 150.0,
+      "origin": "외식(분석함량)"
+    },
+    {
+      "id": 55,
+      "code": "D707-317000000-0001",
+      "name": "달걀찜",
+      "sourceName": "달걀찜",
+      "category": "달걀·두부반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 119.0,
+        "carbs": 1.66,
+        "protein": 11.1,
+        "fat": 7.01
+      },
+      "servingSize": 110.0,
+      "origin": "산업체급식(재료량 기반 산출 함량)"
+    },
+    {
+      "id": 56,
+      "code": "D109-416000000-0001",
+      "name": "달걀말이",
+      "sourceName": "달걀말이",
+      "category": "달걀·두부반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 193.0,
+        "carbs": 1.45,
+        "protein": 17.21,
+        "fat": 13.21
+      },
+      "servingSize": 82.4,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 57,
+      "code": "D711-553000000-0001",
+      "name": "메추리알장조림",
+      "sourceName": "메추리알장조림",
+      "category": "달걀·두부반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 152.0,
+        "carbs": 8.99,
+        "protein": 11.3,
+        "fat": 6.79
+      },
+      "servingSize": 66.6,
+      "origin": "산업체급식(재료량 기반 산출 함량)"
+    },
+    {
+      "id": 58,
+      "code": "D111-517000000-0001",
+      "name": "두부조림",
+      "sourceName": "두부조림",
+      "category": "달걀·두부반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 143.0,
+        "carbs": 4.4,
+        "protein": 9.64,
+        "fat": 9.66
+      },
+      "servingSize": 120.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 59,
+      "code": "D109-419000000-0001",
+      "name": "두부부침",
+      "sourceName": "두부부침",
+      "category": "달걀·두부반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 140.0,
+        "carbs": 2.07,
+        "protein": 10.92,
+        "fat": 9.77
+      },
+      "servingSize": 110.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 60,
+      "code": "D110-470000000-0001",
+      "name": "마파두부",
+      "sourceName": "마파두부",
+      "category": "달걀·두부반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 109.0,
+        "carbs": 5.36,
+        "protein": 7.29,
+        "fat": 6.48
+      },
+      "servingSize": 100.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 61,
+      "code": "D110-486000000-0001",
+      "name": "어묵볶음",
+      "sourceName": "어묵볶음",
+      "category": "기타반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 197.0,
+        "carbs": 24.33,
+        "protein": 8.41,
+        "fat": 7.29
+      },
+      "servingSize": 41.2,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 62,
+      "code": "D110-482000000-0001",
+      "name": "소시지볶음",
+      "sourceName": "소시지볶음",
+      "category": "기타반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 280.0,
+        "carbs": 14.41,
+        "protein": 11.94,
+        "fat": 19.38
+      },
+      "servingSize": 200.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 63,
+      "code": "D312-541000000-0001",
+      "name": "김말이튀김",
+      "sourceName": "김말이튀김",
+      "category": "기타반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 195.0,
+        "carbs": 30.51,
+        "protein": 2.05,
+        "fat": 7.2
+      },
+      "servingSize": 100.0,
+      "origin": "외식(분석함량)"
+    },
+    {
+      "id": 64,
+      "code": "D110-492000000-0001",
+      "name": "잡채",
+      "sourceName": "잡채",
+      "category": "기타반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 146.0,
+        "carbs": 24.26,
+        "protein": 4.71,
+        "fat": 3.3
+      },
+      "servingSize": 200.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 65,
+      "code": "D110-467000000-0001",
+      "name": "떡볶이",
+      "sourceName": "떡볶이",
+      "category": "기타반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 144.0,
+        "carbs": 25.96,
+        "protein": 3.51,
+        "fat": 2.96
+      },
+      "servingSize": 180.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 66,
+      "code": "D309-437070000-0001",
+      "name": "동그랑땡",
+      "sourceName": "완자전_소고기(동그랑땡/육원전)",
+      "category": "기타반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 206.0,
+        "carbs": 8.45,
+        "protein": 13.08,
+        "fat": 13.33
+      },
+      "servingSize": 150.0,
+      "origin": "외식(분석함량)"
+    },
+    {
+      "id": 67,
+      "code": "D110-472000000-0001",
+      "name": "멸치볶음",
+      "sourceName": "멸치볶음",
+      "category": "기타반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 276.0,
+        "carbs": 13.62,
+        "protein": 39.44,
+        "fat": 7.08
+      },
+      "servingSize": 80.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 68,
+      "code": "D111-536000000-0001",
+      "name": "콩자반",
+      "sourceName": "콩조림(콩자반)",
+      "category": "기타반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 281.0,
+        "carbs": 34.83,
+        "protein": 17.97,
+        "fat": 7.73
+      },
+      "servingSize": 30.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 69,
+      "code": "D110-450000000-0001",
+      "name": "감자볶음",
+      "sourceName": "감자볶음",
+      "category": "채소반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 100.0,
+        "carbs": 12.41,
+        "protein": 1.75,
+        "fat": 4.84
+      },
+      "servingSize": 95.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 70,
+      "code": "D111-508000000-0001",
+      "name": "감자조림",
+      "sourceName": "감자조림",
+      "category": "채소반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 114.0,
+        "carbs": 18.1,
+        "protein": 2.4,
+        "fat": 3.52
+      },
+      "servingSize": 95.1,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 71,
+      "code": "D111-528000000-0001",
+      "name": "연근조림",
+      "sourceName": "연근조림",
+      "category": "채소반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 174.0,
+        "carbs": 29.42,
+        "protein": 2.68,
+        "fat": 5.1
+      },
+      "servingSize": 110.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 72,
+      "code": "D113-586000000-0001",
+      "name": "시금치나물",
+      "sourceName": "시금치나물",
+      "category": "채소반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 69.0,
+        "carbs": 3.36,
+        "protein": 3.74,
+        "fat": 4.46
+      },
+      "servingSize": 150.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 73,
+      "code": "D113-597000000-0001",
+      "name": "콩나물무침",
+      "sourceName": "콩나물무침",
+      "category": "채소반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 69.0,
+        "carbs": 3.2,
+        "protein": 3.86,
+        "fat": 4.54
+      },
+      "servingSize": 50.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 74,
+      "code": "D113-584000000-0001",
+      "name": "숙주나물",
+      "sourceName": "숙주나물",
+      "category": "채소반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 35.0,
+        "carbs": 2.96,
+        "protein": 2.22,
+        "fat": 1.58
+      },
+      "servingSize": 70.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 75,
+      "code": "D713-601000000-0001",
+      "name": "고사리나물",
+      "sourceName": "고사리나물",
+      "category": "채소반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 56.0,
+        "carbs": 4.89,
+        "protein": 3.7,
+        "fat": 3.14
+      },
+      "servingSize": 82.4,
+      "origin": "산업체급식(재료량 기반 산출 함량)"
+    },
+    {
+      "id": 76,
+      "code": "D114-627000000-0001",
+      "name": "무생채",
+      "sourceName": "무생채",
+      "category": "채소반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 49.0,
+        "carbs": 7.33,
+        "protein": 2.43,
+        "fat": 1.11
+      },
+      "servingSize": 120.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 77,
+      "code": "D714-644000000-0001",
+      "name": "오이무침",
+      "sourceName": "오이무침",
+      "category": "채소반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 35.0,
+        "carbs": 5.44,
+        "protein": 1.3,
+        "fat": 1.28
+      },
+      "servingSize": 108.2,
+      "origin": "산업체급식(재료량 기반 산출 함량)"
+    },
+    {
+      "id": 78,
+      "code": "D714-620000000-0001",
+      "name": "도토리묵무침",
+      "sourceName": "도토리묵무침",
+      "category": "채소반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 56.0,
+        "carbs": 12.04,
+        "protein": 0.6,
+        "fat": 0.59
+      },
+      "servingSize": 100.0,
+      "origin": "산업체급식(재료량 기반 산출 함량)"
+    },
+    {
+      "id": 79,
+      "code": "D109-412000000-0001",
+      "name": "김치전",
+      "sourceName": "김치전",
+      "category": "채소반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 134.0,
+        "carbs": 19.01,
+        "protein": 5.05,
+        "fat": 4.2
+      },
+      "servingSize": 70.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 80,
+      "code": "D309-445000000-0001",
+      "name": "호박전",
+      "sourceName": "호박전",
+      "category": "채소반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 139.0,
+        "carbs": 10.73,
+        "protein": 4.32,
+        "fat": 8.73
+      },
+      "servingSize": 150.0,
+      "origin": "외식(분석함량)"
+    },
+    {
+      "id": 81,
+      "code": "D714-664000000-0001",
+      "name": "감자샐러드",
+      "sourceName": "감자샐러드",
+      "category": "채소반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 161.0,
+        "carbs": 15.59,
+        "protein": 2.7,
+        "fat": 9.97
+      },
+      "servingSize": 80.0,
+      "origin": "산업체급식(재료량 기반 산출 함량)"
+    },
+    {
+      "id": 82,
+      "code": "D714-676000000-0001",
+      "name": "마카로니샐러드",
+      "sourceName": "마카로니 샐러드",
+      "category": "채소반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 138.0,
+        "carbs": 13.76,
+        "protein": 2.4,
+        "fat": 7.98
+      },
+      "servingSize": 170.0,
+      "origin": "산업체급식(재료량 기반 산출 함량)"
+    },
+    {
+      "id": 83,
+      "code": "D714-701000000-0001",
+      "name": "양배추샐러드",
+      "sourceName": "양배추 샐러드",
+      "category": "채소반찬",
+      "unit": "g",
+      "per100": {
+        "kcal": 99.0,
+        "carbs": 4.32,
+        "protein": 0.9,
+        "fat": 8.95
+      },
+      "servingSize": 122.2,
+      "origin": "산업체급식(재료량 기반 산출 함량)"
+    },
+    {
+      "id": 84,
+      "code": "D315-670000000-0001",
+      "name": "배추김치",
+      "sourceName": "배추김치",
+      "category": "김치·절임",
+      "unit": "g",
+      "per100": {
+        "kcal": 38.0,
+        "carbs": 6.49,
+        "protein": 1.98,
+        "fat": 0.43
+      },
+      "servingSize": null,
+      "origin": "외식(분석함량)"
+    },
+    {
+      "id": 85,
+      "code": "D115-665000000-0001",
+      "name": "깍두기",
+      "sourceName": "깍두기",
+      "category": "김치·절임",
+      "unit": "g",
+      "per100": {
+        "kcal": 33.0,
+        "carbs": 4.24,
+        "protein": 1.56,
+        "fat": 1.06
+      },
+      "servingSize": 50.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 86,
+      "code": "D315-682000000-0001",
+      "name": "총각김치",
+      "sourceName": "총각김치",
+      "category": "김치·절임",
+      "unit": "g",
+      "per100": {
+        "kcal": 42.0,
+        "carbs": 7.89,
+        "protein": 1.92,
+        "fat": 0.29
+      },
+      "servingSize": null,
+      "origin": "외식(분석함량)"
+    },
+    {
+      "id": 87,
+      "code": "D315-675000000-0001",
+      "name": "열무김치",
+      "sourceName": "열무김치",
+      "category": "김치·절임",
+      "unit": "g",
+      "per100": {
+        "kcal": 36.0,
+        "carbs": 5.87,
+        "protein": 2.39,
+        "fat": 0.38
+      },
+      "servingSize": null,
+      "origin": "외식(분석함량)"
+    },
+    {
+      "id": 88,
+      "code": "D117-694000000-0001",
+      "name": "단무지",
+      "sourceName": "단무지",
+      "category": "김치·절임",
+      "unit": "g",
+      "per100": {
+        "kcal": 13.0,
+        "carbs": 2.4,
+        "protein": 0.33,
+        "fat": 0.2
+      },
+      "servingSize": 30.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 89,
+      "code": "D104-197000000-0001",
+      "name": "호박죽",
+      "sourceName": "호박죽",
+      "category": "간식·빵",
+      "unit": "g",
+      "per100": {
+        "kcal": 49.0,
+        "carbs": 6.58,
+        "protein": 1.93,
+        "fat": 1.71
+      },
+      "servingSize": 270.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 90,
+      "code": "D302-096434400-0002",
+      "name": "햄치즈샌드위치",
+      "sourceName": "샌드위치_햄_치즈",
+      "category": "간식·빵",
+      "unit": "g",
+      "per100": {
+        "kcal": 284.0,
+        "carbs": 26.95,
+        "protein": 8.57,
+        "fat": 15.75
+      },
+      "servingSize": null,
+      "origin": "외식(분석함량)"
+    },
+    {
+      "id": 91,
+      "code": "D102-123000000-0001",
+      "name": "햄버거",
+      "sourceName": "햄버거",
+      "category": "간식·빵",
+      "unit": "g",
+      "per100": {
+        "kcal": 264.0,
+        "carbs": 21.67,
+        "protein": 12.85,
+        "fat": 13.98
+      },
+      "servingSize": 210.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 92,
+      "code": "D102-097000000-0001",
+      "name": "소보로빵",
+      "sourceName": "소보로빵",
+      "category": "간식·빵",
+      "unit": "g",
+      "per100": {
+        "kcal": 392.0,
+        "carbs": 55.63,
+        "protein": 8.27,
+        "fat": 15.13
+      },
+      "servingSize": 70.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 93,
+      "code": "D102-070000000-0001",
+      "name": "인절미",
+      "sourceName": "인절미",
+      "category": "간식·빵",
+      "unit": "g",
+      "per100": {
+        "kcal": 242.0,
+        "carbs": 50.07,
+        "protein": 5.64,
+        "fat": 2.16
+      },
+      "servingSize": null,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 94,
+      "code": "D107-128180000-0001",
+      "name": "찐고구마",
+      "sourceName": "고구마_찐고구마",
+      "category": "간식·빵",
+      "unit": "g",
+      "per100": {
+        "kcal": 139.0,
+        "carbs": 32.47,
+        "protein": 1.67,
+        "fat": 0.24
+      },
+      "servingSize": 200.0,
+      "origin": "가정식(분석 함량)"
+    },
+    {
+      "id": 95,
+      "code": "D327-758010000-0001",
+      "name": "삶은달걀",
+      "sourceName": "달걀_삶은것",
+      "category": "간식·빵",
+      "unit": "g",
+      "per100": {
+        "kcal": 150.0,
+        "carbs": 0.63,
+        "protein": 12.8,
+        "fat": 10.65
+      },
+      "servingSize": null,
+      "origin": "외식(분석함량)"
+    },
+    {
+      "id": 96,
+      "code": "D320-748080000-0001",
+      "name": "아메리카노",
+      "sourceName": "커피_아메리카노",
+      "category": "음료",
+      "unit": "ml",
+      "per100": {
+        "kcal": 4.0,
+        "carbs": 0.66,
+        "protein": 0.23,
+        "fat": 0.03
+      },
+      "servingSize": null,
+      "origin": "외식(분석함량)"
+    },
+    {
+      "id": 97,
+      "code": "D320-748110000-0001",
+      "name": "카페라떼",
+      "sourceName": "커피_카페라떼",
+      "category": "음료",
+      "unit": "ml",
+      "per100": {
+        "kcal": 57.0,
+        "carbs": 3.11,
+        "protein": 2.72,
+        "fat": 3.72
+      },
+      "servingSize": null,
+      "origin": "외식(분석함량)"
+    },
+    {
+      "id": 98,
+      "code": "D320-716180000-0001",
+      "name": "과일주스",
+      "sourceName": "과ㆍ채주스_혼합과일주스",
+      "category": "음료",
+      "unit": "ml",
+      "per100": {
+        "kcal": 59.0,
+        "carbs": 13.19,
+        "protein": 0.77,
+        "fat": 0.37
+      },
+      "servingSize": null,
+      "origin": "외식(분석함량)"
+    },
+    {
+      "id": 99,
+      "code": "D320-738000000-0001",
+      "name": "식혜",
+      "sourceName": "식혜",
+      "category": "음료",
+      "unit": "ml",
+      "per100": {
+        "kcal": 87.0,
+        "carbs": 16.21,
+        "protein": 1.53,
+        "fat": 1.75
+      },
+      "servingSize": 150.0,
+      "origin": "외식(분석함량)"
+    },
+    {
+      "id": 100,
+      "code": "D720-757000000-0001",
+      "name": "미숫가루",
+      "sourceName": "미숫가루(선식)음료",
+      "category": "음료",
+      "unit": "ml",
+      "per100": {
+        "kcal": 128.0,
+        "carbs": 27.73,
+        "protein": 2.9,
+        "fat": 1.1
+      },
+      "servingSize": 100.0,
+      "origin": "산업체급식(재료량 기반 산출 함량)"
+    }
+  ]
+}
