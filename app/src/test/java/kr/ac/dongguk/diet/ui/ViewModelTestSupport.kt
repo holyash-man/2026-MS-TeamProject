@@ -10,6 +10,7 @@ import kr.ac.dongguk.diet.data.food.LocalFoodRepository
 import kr.ac.dongguk.diet.data.food.SampleFoods
 import kr.ac.dongguk.diet.data.local.FakeMealDao
 import kr.ac.dongguk.diet.data.local.RoomMealRepository
+import kr.ac.dongguk.diet.data.sample.SampleDataSeeder
 import kr.ac.dongguk.diet.domain.model.Food
 import kr.ac.dongguk.diet.domain.model.Meal
 import kr.ac.dongguk.diet.domain.model.MealItem
@@ -30,9 +31,10 @@ class MainDispatcherRule(val dispatcher: TestDispatcher = UnconfinedTestDispatch
  * 음식(SampleFoods): 1 쌀밥(1인분 210g), 2 김치볶음밥, 3 김치찌개, 4 배추김치, 5 아메리카노(ml)
  * — 모두 100g당 탄 20 / 단 5 / 지 1, 열량은 100kcal (아메리카노 4kcal)
  */
-class TestRepositories(dispatcher: TestDispatcher) {
-    val foods = LocalFoodRepository({ SampleFoods.json() }, dispatcher)
+class TestRepositories(dispatcher: TestDispatcher, foodsJson: () -> String = { SampleFoods.json() }) {
+    val foods = LocalFoodRepository(foodsJson, dispatcher)
     val meals = RoomMealRepository(FakeMealDao(), foods)
+    val seeder = SampleDataSeeder(foods, meals, now = { LocalDateTime.parse("2026-11-15T20:00") })
 
     suspend fun food(id: Long): Food = foods.getById(id)!!
 

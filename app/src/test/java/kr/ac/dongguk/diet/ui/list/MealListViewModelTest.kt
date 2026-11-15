@@ -25,7 +25,7 @@ class MealListViewModelTest {
         repos.saveMeal("2026-11-15T19:00", MealType.DINNER, 3L to 300.0)   // 300 kcal
         repos.saveMeal("2026-11-15T08:00", MealType.BREAKFAST, 1L to 200.0) // 200 kcal
         repos.saveMeal("2026-11-14T12:00", MealType.LUNCH, 2L to 150.0)     // 150 kcal
-        val vm = MealListViewModel(repos.meals)
+        val vm = MealListViewModel(repos.meals, repos.seeder)
         backgroundScope.launch(UnconfinedTestDispatcher(testScheduler)) { vm.uiState.collect {} }
 
         val days = vm.uiState.value.days
@@ -38,16 +38,30 @@ class MealListViewModelTest {
 
     @Test
     fun noMeals_isEmptyState() = runTest {
-        val vm = MealListViewModel(repos.meals)
+        val vm = MealListViewModel(repos.meals, repos.seeder)
         backgroundScope.launch(UnconfinedTestDispatcher(testScheduler)) { vm.uiState.collect {} }
 
         assertTrue(vm.uiState.value.isEmpty)
     }
 
     @Test
+    fun loadSampleData_fillsEmptyList() = runTest {
+        val real = TestRepositories(main.dispatcher) { java.io.File("src/main/assets/foods.json").readText() }
+        val vm = MealListViewModel(real.meals, real.seeder)
+        backgroundScope.launch(UnconfinedTestDispatcher(testScheduler)) { vm.uiState.collect {} }
+        assertTrue(vm.uiState.value.isEmpty)
+
+        vm.loadSampleData()
+
+        val state = vm.uiState.value
+        assertEquals(30, state.days.size) // 최근 30일 모두 기록 있음 (매일 중식)
+        assertTrue(!state.isLoadingSample)
+    }
+
+    @Test
     fun delete_removesMealFromList() = runTest {
         val id = repos.saveMeal("2026-11-15T12:00", MealType.LUNCH, 1L to 100.0)
-        val vm = MealListViewModel(repos.meals)
+        val vm = MealListViewModel(repos.meals, repos.seeder)
         backgroundScope.launch(UnconfinedTestDispatcher(testScheduler)) { vm.uiState.collect {} }
 
         vm.delete(id)

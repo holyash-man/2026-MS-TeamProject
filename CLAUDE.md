@@ -28,12 +28,13 @@ app/src/androidTest/   Compose UI 테스트 (2개 이상)
 | ViewModel | 주요 상태 | 동작 |
 |---|---|---|
 | `MealInputViewModel` | dateTime, mealType(시각으로 자동 추천), photoUri, items(음식·섭취량 글자·영양), query/searchResults, **preview**(탄단지 미리보기), canSave, savedMealId, errorMessage | onDateChange, onTimeChange, onMealTypeChange, onPhotoChange, onQueryChange, addFood, onAmountChange, removeItem, save, onSavedHandled, onErrorShown |
-| `MealListViewModel` | days: 날짜별 `DaySection`(summary = 열량·끼니 수, meals = 시간 순 끼니+열량), isEmpty | delete |
+| `MealListViewModel` | days: 날짜별 `DaySection`(summary = 열량·끼니 수, meals = 시간 순 끼니+열량), isEmpty, isLoadingSample | delete, **loadSampleData**(빈 화면의 '샘플 데이터 불러오기' 버튼용) |
 | `MealDetailViewModel` | meal, items(음식별 영양), total(끼니 영양·열량), macroRatio, notFound, deleted | delete |
 | `AnalysisViewModel` | period(1달/1주), analysis(총량·하루 평균), byType(끼니별 영양·열량 비율), macroRatio, **source**(데이터 출처) | onPeriodChange |
 
 - 상세·수정 화면 route 에는 `mealId`(Long) 인자를 넣는다. 입력 화면에 `mealId` 가 있으면 수정 모드가 된다.
 - 숫자는 계산값 그대로이므로 표시할 때 `Nutrition.rounded()` 를 쓴다.
+- 시연용 샘플 식사: `loadSampleData()` 가 기록이 비어 있을 때만 최근 30일치(약 86끼, 하루 평균 약 2,000kcal)를 넣는다. 메뉴 구성은 `data/sample/SampleMealGenerator.kt`.
 
 ## 명령
 

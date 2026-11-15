@@ -22,7 +22,7 @@ import kr.ac.dongguk.diet.ui.list.MealListViewModel
 object AppViewModelProvider {
     val Factory = viewModelFactory {
         initializer {
-            MealListViewModel(container().mealRepository)
+            MealListViewModel(container().mealRepository, container().sampleDataSeeder)
         }
         initializer {
             MealInputViewModel(createSavedStateHandle(), container().foodRepository, container().mealRepository)
