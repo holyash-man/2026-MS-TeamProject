@@ -1,0 +1,18 @@
+# Gradle / Android Studio
+.gradle/
+build/
+/local.properties
+/captures
+.externalNativeBuild
+.cxx
+*.apk
+*.aab
+*.iml
+.idea/
+.kotlin/
+
+# macOS
+.DS_Store
+
+# Claude Code 개인 설정 (각자 로컬 전용)
+.claude/settings.local.json
