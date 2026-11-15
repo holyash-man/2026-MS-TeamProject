@@ -27,6 +27,13 @@ def main() -> None:
     prompt = (payload.get("prompt") or "").strip()
     if not prompt:
         return
+    # 사람이 입력하지 않은 시스템 알림(백그라운드 작업 완료 등)은 기록하지 않음
+    if re.match(r"<(task-notification|side-sessions-event|ci-monitor-event)>", prompt):
+        return
+    # 앱 버튼이 보내는 내부 명령(<create-pr-command> 등)은 원문 대신 한 줄로 요약
+    app_cmd = re.match(r"<([a-z][a-z0-9-]*-command)>", prompt)
+    if app_cmd:
+        prompt = f"[앱 버튼 명령: {app_cmd.group(1)}]"
 
     root = os.environ.get("CLAUDE_PROJECT_DIR") or payload.get("cwd") or os.getcwd()
     log_path = os.path.join(root, sys.argv[1])
