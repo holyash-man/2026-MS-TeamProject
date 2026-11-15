@@ -8,7 +8,8 @@ Jetpack Compose 식단 관리 앱. 2인 1조, 마감 2026-12-15. 과제 요구�
 app/src/main/java/kr/ac/dongguk/diet/
   data/        A: Room(local), 식약처 음식 데이터 로딩(food), Repository 구현(repository)
   domain/      A: 모델(model), 영양 계산·집계 로직(calc)
-  ui/          B: theme, navigation, input/list/analysis 화면
+  ui/          B: theme, navigation, input/list/detail/analysis 화면
+               (각 화면의 *ViewModel.kt 와 AppViewModelProvider 는 A)
 app/src/main/assets/   A: 식약처 음식 100개 JSON
 app/src/test/          로컬 단위 테스트 (12개 이상, 주로 domain/calc, ViewModel)
 app/src/androidTest/   Compose UI 테스트 (2개 이상)
@@ -19,6 +20,20 @@ app/src/androidTest/   Compose UI 테스트 (2개 이상)
 - DI는 Hilt 없이 `AppContainer`(수동 컨테이너, `DietApplication.container`)로 한다.
 - 음식 100개는 읽기 전용이라 Room 에 넣지 않는다. `LocalFoodRepository` 가 assets/foods.json 을 한 번 파싱해 캐시한다. Room 은 식사 기록용(`meals`, `meal_items` 테이블, 음식은 foodId 로만 참조). 스키마를 바꾸면 `DietDatabase.version` 을 올리고 `app/schemas/` 의 새 스키마 파일도 커밋한다.
 - foods.json 은 `tools/food-data/build_foods.py` 로만 만든다(직접 수정 금지). 자세한 규칙은 `tools/food-data/README.md`.
+
+## ViewModel 사용법 (화면 ↔ 로직 접점)
+
+`val vm: XxxViewModel = viewModel(factory = AppViewModelProvider.Factory)` 로 받고 `vm.uiState.collectAsStateWithLifecycle()` 로 구독한다.
+
+| ViewModel | 주요 상태 | 동작 |
+|---|---|---|
+| `MealInputViewModel` | dateTime, mealType(시각으로 자동 추천), photoUri, items(음식·섭취량 글자·영양), query/searchResults, **preview**(탄단지 미리보기), canSave, savedMealId, errorMessage | onDateChange, onTimeChange, onMealTypeChange, onPhotoChange, onQueryChange, addFood, onAmountChange, removeItem, save, onSavedHandled, onErrorShown |
+| `MealListViewModel` | days: 날짜별 `DaySection`(summary = 열량·끼니 수, meals = 시간 순 끼니+열량), isEmpty | delete |
+| `MealDetailViewModel` | meal, items(음식별 영양), total(끼니 영양·열량), macroRatio, notFound, deleted | delete |
+| `AnalysisViewModel` | period(1달/1주), analysis(총량·하루 평균), byType(끼니별 영양·열량 비율), macroRatio, **source**(데이터 출처) | onPeriodChange |
+
+- 상세·수정 화면 route 에는 `mealId`(Long) 인자를 넣는다. 입력 화면에 `mealId` 가 있으면 수정 모드가 된다.
+- 숫자는 계산값 그대로이므로 표시할 때 `Nutrition.rounded()` 를 쓴다.
 
 ## 명령
 
