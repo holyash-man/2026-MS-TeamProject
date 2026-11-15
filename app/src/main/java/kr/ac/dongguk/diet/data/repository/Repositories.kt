@@ -29,8 +29,13 @@ interface FoodRepository {
 
 /** 식사 기록 저장·조회. */
 interface MealRepository {
+    /** 전체 식사, 최신 시각부터. 저장·삭제하면 새 목록을 다시 내보낸다. */
     fun observeMeals(): Flow<List<Meal>>
+
     suspend fun getMeal(id: Long): Meal?
+
+    /** id 가 0이면 새로 저장, 아니면 수정. 저장된 id 를 돌려준다. 음식이 없거나 섭취량이 0 이하면 IllegalArgumentException. */
     suspend fun saveMeal(meal: Meal): Long
+
     suspend fun deleteMeal(id: Long)
 }
