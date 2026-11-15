@@ -2,8 +2,13 @@ package kr.ac.dongguk.diet
 
 import android.app.Application
 
-/**
- * 앱 전역 객체.
- * TODO(A): Room DB, Repository 구현이 생기면 여기서 수동 DI 컨테이너(AppContainer)를 만들어 화면에 넘긴다.
- */
-class DietApplication : Application()
+/** 앱 전역 객체. 의존성은 [AppContainer] 에 모은다. */
+class DietApplication : Application() {
+    lateinit var container: AppContainer
+        private set
+
+    override fun onCreate() {
+        super.onCreate()
+        container = AppContainer(this)
+    }
+}
