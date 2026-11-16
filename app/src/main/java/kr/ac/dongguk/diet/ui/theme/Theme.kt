@@ -5,21 +5,20 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.graphics.Color
 
-// TODO(B): 디자인 확정 후 색상·타이포그래피 교체
 private val LightColors = lightColorScheme(
-    primary = Color(0xFF2E7D32),
-    secondary = Color(0xFFF9A825),
-    tertiary = Color(0xFF1565C0),
+    primary = Green40,
+    secondary = Amber40,
+    tertiary = Blue40,
 )
 
 private val DarkColors = darkColorScheme(
-    primary = Color(0xFF81C784),
-    secondary = Color(0xFFFFD54F),
-    tertiary = Color(0xFF90CAF9),
+    primary = Green80,
+    secondary = Amber80,
+    tertiary = Blue80,
 )
 
+/** 앱 테마. 화면은 색·글꼴을 직접 쓰지 않고 MaterialTheme 값을 참조한다. 다크 모드는 시스템 설정을 따른다. */
 @Composable
 fun DietAppTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
@@ -27,6 +26,7 @@ fun DietAppTheme(
 ) {
     MaterialTheme(
         colorScheme = if (darkTheme) DarkColors else LightColors,
+        typography = DietTypography,
         content = content,
     )
 }
