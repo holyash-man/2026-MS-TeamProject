@@ -76,4 +76,18 @@ class MealDaoTest {
         val remaining = db.query("SELECT COUNT(*) FROM meal_items", null).use { c -> c.moveToFirst(); c.getInt(0) }
         assertEquals(0, remaining)
     }
+
+    @Test
+    fun insertAll_addsEveryMealWithItems() = runBlocking {
+        dao.insertAll(
+            listOf(
+                meal(1_000) to listOf(item(1, 100.0, 0), item(2, 50.0, 1)),
+                meal(2_000) to listOf(item(3, 300.0, 0)),
+            ),
+        )
+
+        val rows = dao.observeAll().first()
+        // 최신순: dateTime 2000(음식 1개) → 1000(음식 2개)
+        assertEquals(listOf(1, 2), rows.map { it.items.size })
+    }
 }

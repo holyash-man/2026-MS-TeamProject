@@ -4,6 +4,7 @@ import android.content.Context
 import kr.ac.dongguk.diet.data.food.LocalFoodRepository
 import kr.ac.dongguk.diet.data.local.DietDatabase
 import kr.ac.dongguk.diet.data.local.RoomMealRepository
+import kr.ac.dongguk.diet.data.photo.InternalPhotoStorage
 import kr.ac.dongguk.diet.data.repository.FoodRepository
 import kr.ac.dongguk.diet.data.repository.MealRepository
 import kr.ac.dongguk.diet.data.sample.SampleDataSeeder
@@ -22,7 +23,7 @@ class AppContainer(context: Context) {
     private val database: DietDatabase by lazy { DietDatabase.create(appContext) }
 
     val mealRepository: MealRepository by lazy {
-        RoomMealRepository(database.mealDao(), foodRepository)
+        RoomMealRepository(database.mealDao(), foodRepository, InternalPhotoStorage(appContext))
     }
 
     /** 시연용 샘플 식사(최근 30일). 기록이 없을 때만 넣는다. */

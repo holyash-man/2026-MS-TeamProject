@@ -34,8 +34,16 @@ interface MealRepository {
 
     suspend fun getMeal(id: Long): Meal?
 
-    /** id 가 0이면 새로 저장, 아니면 수정. 저장된 id 를 돌려준다. 음식이 없거나 섭취량이 0 이하면 IllegalArgumentException. */
+    /**
+     * id 가 0이면 새로 저장, 아니면 수정. 저장된 id 를 돌려준다.
+     * 사진은 Photo Picker 등에서 받은 URI 를 그대로 넘기면 앱 내부로 복사해 저장한다.
+     * 음식이 없거나 섭취량이 0 이하면 IllegalArgumentException, 사진을 복사할 수 없으면 IllegalStateException.
+     */
     suspend fun saveMeal(meal: Meal): Long
 
+    /** 여러 끼니를 한 번에 새로 저장(시연용 샘플 데이터). 목록이 한 번만 갱신된다. */
+    suspend fun saveMeals(meals: List<Meal>)
+
+    /** 끼니와 그 사진 파일을 함께 지운다. */
     suspend fun deleteMeal(id: Long)
 }

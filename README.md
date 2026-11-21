@@ -15,7 +15,7 @@
 
 ### 음식 입력하기
 - 식사 날짜·시간 입력. 시간에 따라 끼니 종류(조식·중식·석식·간식/음료)를 자동 추천하고, 직접 바꿀 수 있음
-- 음식 사진 입력
+- 음식 사진 입력 (갤러리에서 고른 사진을 앱 내부에 복사해 보관하므로, 앱을 다시 켜거나 원본을 지워도 사진이 유지됨)
 - 음식·반찬 검색(식약처 음식 100종)과 여러 개 추가. 검색은 공백을 무시하고 원본 식품명·분류로도 찾음
 - 섭취량(g, 음료는 ml) 입력. 1인분 참고량이 기본값으로 들어감
 - 입력 화면에서 탄수화물·단백질·지방·열량 **미리보기**
@@ -118,20 +118,21 @@
 ./gradlew connectedDebugAndroidTest      # 계측 테스트 (Compose UI · Room, 에뮬레이터 필요)
 ```
 
-### 로컬 단위 테스트 (82개)
+### 로컬 단위 테스트 (89개)
 | 영역 | 테스트 클래스 (개수) | 확인 내용 |
 |---|---|---|
 | **영양 계산** | NutritionCalculatorTest (10), NutritionFormatTest (3), NutritionTest (2) | 섭취량 환산, ml 음료, 잘못된 섭취량 거부, 끼니 합계, **실제 식약처 값 손계산 비교**, 반올림, 탄단지 비율 |
 | **분석·요약** | MealAnalyzerTest (6), MealTypeClassifierTest (4) | 날짜별 열량·끼니 수, 최근 30일 경계, 끼니 종류별 합계, 하루 평균, 시간대별 끼니 추천 |
 | 음식 데이터 | FoodCatalogParserTest (6), FoodSearchTest (7), LocalFoodRepositoryTest (3), FoodsAssetTest (4) | JSON 검증, 검색 순위, 캐시, **실제 foods.json 100종 품질** (열량 = 탄단지 환산 ±15%) |
-| 식사 저장 | MealMappersTest (4), RoomMealRepositoryTest (6) | 시각 변환, 저장·수정·삭제, 입력 검증 |
+| 식사 저장 | MealMappersTest (4), RoomMealRepositoryTest (13) | 시각 변환, 저장·수정·삭제, 입력 검증, 사진 복사·교체·삭제, 일괄 저장 |
 | 화면 로직 | MealInputViewModelTest (7), MealListViewModelTest (4), MealDetailViewModelTest (3), AnalysisViewModelTest (4) | 미리보기, 저장·수정, 날짜별 목록, 상세 합계, 1달/1주 분석, 출처 |
 | 샘플 데이터 | SampleMealGeneratorTest (7), SampleDataSeederTest (2) | 재현성, 기간, 끼니 분류, 하루 평균 열량 |
 
 ### 계측 테스트
 | 테스트 | 확인 내용 |
 |---|---|
-| MealDaoTest (4) | 실제 SQLite에서 저장, 최신순 정렬, 수정, 끼니 삭제 시 음식 함께 삭제 |
+| MealDaoTest (5) | 실제 SQLite에서 저장, 최신순 정렬, 수정, 끼니 삭제 시 음식 함께 삭제, 일괄 저장 |
+| InternalPhotoStorageTest (3) | 실제 기기에서 사진을 앱 내부로 복사(원본 삭제 후에도 유지), 삭제, 없는 파일 처리 |
 | NavigationTest (1) | 하단 탭 이동 _(Compose UI 테스트, B가 추가 예정)_ |
 
 <!-- TODO(B): Compose UI 테스트 추가 후 표 갱신 -->
@@ -145,6 +146,7 @@ app/src/main/java/kr/ac/dongguk/diet/
 ├── data/
 │   ├── food/        식약처 음식 100종 로딩·검색 (LocalFoodRepository)
 │   ├── local/       Room DB: 식사 기록 (meals, meal_items)
+│   ├── photo/       식사 사진을 앱 내부 저장소에 보관
 │   ├── sample/      시연용 샘플 식사 생성
 │   └── repository/  Repository 인터페이스 (데이터 ↔ 화면 계약)
 ├── domain/
