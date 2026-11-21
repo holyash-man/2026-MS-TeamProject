@@ -5,7 +5,7 @@
 매일 먹은 음식을 사진과 함께 기록하면, **식품의약품안전처 영양성분 데이터**로 열량과 탄수화물·단백질·지방을 계산해 하루·한 주·한 달의 영양 균형을 보여주는 안드로이드 앱입니다.
 
 - **시연 영상**: _(YouTube 링크 추가 예정)_
-- **저장소**: https://github.com/holyash-man/Mobile_Software_Project
+- **저장소**: https://github.com/holyash-man/2026-MS-TeamProject
 
 <!-- TODO(B): 화면 완성 후 스크린샷 추가 (입력 / 목록 / 상세 / 분석) -->
 
@@ -49,7 +49,7 @@
 ### 실행
 1. 저장소를 받습니다.
    ```bash
-   git clone https://github.com/holyash-man/Mobile_Software_Project.git
+   git clone https://github.com/holyash-man/2026-MS-TeamProject.git
    ```
 2. Android Studio에서 폴더를 열고 Gradle 동기화가 끝날 때까지 기다립니다. SDK 37이 없으면 SDK Manager에서 설치합니다.
 3. 실행할 기기를 고르고 ▶ Run 'app' 을 누릅니다.
