@@ -18,7 +18,9 @@ class SampleDataSeeder(
     suspend fun seedIfEmpty(days: Int = 30): Int {
         if (mealRepository.observeMeals().first().isNotEmpty()) return 0
         val meals = SampleMealGenerator(foodRepository.getAll()).generate(now(), days)
-        meals.forEach { mealRepository.saveMeal(it) }
+        // 한 트랜잭션으로 저장해야 목록이 한 번만 갱신된다.
+        // (하나씩 저장하면 가장 오래된 날이 먼저 그려져, 목록이 그 위치에 머무는 문제가 있었다)
+        mealRepository.saveMeals(meals)
         return meals.size
     }
 }

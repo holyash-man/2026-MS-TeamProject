@@ -86,7 +86,9 @@ class MealInputViewModelTest {
         val id = vm.uiState.value.savedMealId!!
         val saved = repos.meals.getMeal(id)!!
         assertEquals(MealType.LUNCH, saved.type)
-        assertEquals("content://photo/1", saved.photoUri)
+        // Photo Picker 주소는 저장할 때 앱 내부 보관소로 복사된 주소로 바뀐다
+        assertTrue(repos.photos.isStored(saved.photoUri!!))
+        assertEquals(listOf(saved.photoUri), repos.photos.stored)
         assertEquals(210.0, saved.items.single().amount, eps)
 
         vm.onSavedHandled()

@@ -19,6 +19,7 @@ app/src/androidTest/   Compose UI 테스트 (2개 이상)
 - 영양 값은 식약처 DB와 같이 **100g 기준**으로 저장하고, 섭취량 환산(`값 × g / 100`)은 domain/calc 에서만 한다.
 - DI는 Hilt 없이 `AppContainer`(수동 컨테이너, `DietApplication.container`)로 한다.
 - 음식 100개는 읽기 전용이라 Room 에 넣지 않는다. `LocalFoodRepository` 가 assets/foods.json 을 한 번 파싱해 캐시한다. Room 은 식사 기록용(`meals`, `meal_items` 테이블, 음식은 foodId 로만 참조). 스키마를 바꾸면 `DietDatabase.version` 을 올리고 `app/schemas/` 의 새 스키마 파일도 커밋한다.
+- 사진: 화면은 Photo Picker URI 를 그대로 `onPhotoChange()` 에 넘긴다. `RoomMealRepository.saveMeal` 이 `PhotoStorage` 로 앱 내부(filesDir/meal_photos)에 복사해 `file://` 주소를 저장하고, 사진 교체·끼니 삭제 시 이전 파일을 지운다.
 - foods.json 은 `tools/food-data/build_foods.py` 로만 만든다(직접 수정 금지). 자세한 규칙은 `tools/food-data/README.md`.
 
 ## ViewModel 사용법 (화면 ↔ 로직 접점)

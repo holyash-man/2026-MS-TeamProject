@@ -6,6 +6,7 @@ import kotlinx.coroutines.test.runTest
 import kr.ac.dongguk.diet.data.food.LocalFoodRepository
 import kr.ac.dongguk.diet.data.local.FakeMealDao
 import kr.ac.dongguk.diet.data.local.RoomMealRepository
+import kr.ac.dongguk.diet.data.photo.FakePhotoStorage
 import kr.ac.dongguk.diet.domain.model.Meal
 import kr.ac.dongguk.diet.domain.model.MealItem
 import kr.ac.dongguk.diet.domain.model.MealType
@@ -21,7 +22,7 @@ class SampleDataSeederTest {
     @Test
     fun seedsAllGeneratedMeals_whenEmpty() = runTest {
         val foods = LocalFoodRepository({ File("src/main/assets/foods.json").readText() }, StandardTestDispatcher(testScheduler))
-        val meals = RoomMealRepository(FakeMealDao(), foods)
+        val meals = RoomMealRepository(FakeMealDao(), foods, FakePhotoStorage())
 
         val inserted = SampleDataSeeder(foods, meals) { now }.seedIfEmpty()
 
@@ -32,7 +33,7 @@ class SampleDataSeederTest {
     @Test
     fun doesNothing_whenRecordsExist() = runTest {
         val foods = LocalFoodRepository({ File("src/main/assets/foods.json").readText() }, StandardTestDispatcher(testScheduler))
-        val meals = RoomMealRepository(FakeMealDao(), foods)
+        val meals = RoomMealRepository(FakeMealDao(), foods, FakePhotoStorage())
         meals.saveMeal(Meal(dateTime = now, type = MealType.DINNER, photoUri = null, items = listOf(MealItem(foods.getById(1)!!, 210.0))))
 
         val inserted = SampleDataSeeder(foods, meals) { now }.seedIfEmpty()

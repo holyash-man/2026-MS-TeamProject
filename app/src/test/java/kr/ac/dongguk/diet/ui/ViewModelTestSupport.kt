@@ -10,6 +10,7 @@ import kr.ac.dongguk.diet.data.food.LocalFoodRepository
 import kr.ac.dongguk.diet.data.food.SampleFoods
 import kr.ac.dongguk.diet.data.local.FakeMealDao
 import kr.ac.dongguk.diet.data.local.RoomMealRepository
+import kr.ac.dongguk.diet.data.photo.FakePhotoStorage
 import kr.ac.dongguk.diet.data.sample.SampleDataSeeder
 import kr.ac.dongguk.diet.domain.model.Food
 import kr.ac.dongguk.diet.domain.model.Meal
@@ -33,7 +34,8 @@ class MainDispatcherRule(val dispatcher: TestDispatcher = UnconfinedTestDispatch
  */
 class TestRepositories(dispatcher: TestDispatcher, foodsJson: () -> String = { SampleFoods.json() }) {
     val foods = LocalFoodRepository(foodsJson, dispatcher)
-    val meals = RoomMealRepository(FakeMealDao(), foods)
+    val photos = FakePhotoStorage()
+    val meals = RoomMealRepository(FakeMealDao(), foods, photos)
     val seeder = SampleDataSeeder(foods, meals, now = { LocalDateTime.parse("2026-11-15T20:00") })
 
     suspend fun food(id: Long): Food = foods.getById(id)!!

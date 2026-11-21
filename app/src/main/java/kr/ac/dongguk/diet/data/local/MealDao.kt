@@ -50,4 +50,13 @@ interface MealDao {
         insertItems(items.map { it.copy(id = 0, mealId = mealId) })
         return mealId
     }
+
+    /** 여러 끼니를 한 트랜잭션으로 새로 추가한다. 트랜잭션이 끝난 뒤 [observeAll] 이 한 번만 갱신된다. */
+    @Transaction
+    suspend fun insertAll(meals: List<Pair<MealEntity, List<MealItemEntity>>>) {
+        meals.forEach { (meal, items) ->
+            val mealId = insertMeal(meal.copy(id = 0))
+            insertItems(items.map { it.copy(id = 0, mealId = mealId) })
+        }
+    }
 }
